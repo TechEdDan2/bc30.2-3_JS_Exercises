@@ -41,11 +41,12 @@ axios.get(`${baseURL}/${ranNum}/trivia`)
         console.log(`Last ${res.data}`)
         factlist.push(res.data)
         console.log(factlist)
-        for (let fact of factlist) {
-            const f = document.createElement('li')
-            f.innerText = fact
-            list.append(f)
-        }
+        list.innerHTML = factlist.map(fact => `<li>${fact}</li>`).join('')
+        // for (let fact of factlist) {
+        //     const f = document.createElement('li')
+        //     f.innerText = fact
+        //     list.append(f)
+        // }
     })
     .catch(err => {
         console.log(err)
