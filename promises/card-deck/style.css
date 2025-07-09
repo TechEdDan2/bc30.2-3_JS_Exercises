@@ -11,8 +11,19 @@ body {
     min-height: 100vh;
     flex-direction: column;
     text-align: center;
-    background-image: url(an-le-khanh-O6TMlFbWVNM-unsplash.jpg);
+    background-image: url(an-le-khanh-unsplash.jpg);
     background-size: cover;
+}
+
+h1 {
+    color: aliceblue;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 3rem;
+}
+
+button {
+    padding: 1rem 1.25rem;
+    border-radius: 10px;
 }
 
 .card-box {

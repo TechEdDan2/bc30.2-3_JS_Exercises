@@ -55,9 +55,13 @@ $(document).ready(function () {
         $.getJSON(`${baseURL}/${deck}/draw/?count=1`)
             .then(res => {
                 let cardImg = res.cards[0].image
-                let rotateAngle = Math.random() * 2 - 4;
+                let rotateAngle = Math.random() * 1 - 3;
                 let styleString = `style="transform: rotate(${rotateAngle}turn)"`
                 $('.card-box').append(`<img src="${cardImg}" ${styleString}>`)
+
+                if (res.remaining === 0) {
+                    $btn.hide();
+                }
             })
             .catch(err => {
                 console.log(err);
